@@ -1255,7 +1255,7 @@ dependencies = [
  "wasmer",
  "wasmer-compiler",
  "wasmer-types",
- "wasmparser 0.121.2",
+ "wasmparser 0.244.0",
 ]
 
 [[package]]
@@ -4061,6 +4061,7 @@ dependencies = [
  "allocator-api2",
  "equivalent",
  "foldhash 0.1.5",
+ "serde",
 ]
 
 [[package]]
@@ -11824,6 +11825,7 @@ dependencies = [
  "hashbrown 0.15.5",
  "indexmap 2.13.0",
  "semver 1.0.27",
+ "serde",
 ]
 
 [[package]]

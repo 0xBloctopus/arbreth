@@ -90,7 +90,7 @@ reth-tasks = { git = "https://github.com/paradigmxyz/reth.git", rev = "20cfb2d51
 alloy-primitives = { version = "1.5", default-features = false, features = ["map-foldhash"] }
 alloy-consensus = { version = "1.7", default-features = false }
 alloy-eips = { version = "1.7", default-features = false }
-alloy-evm = { version = "0.27", features = ["rpc"] }
+alloy-evm = { version = "0.28", features = ["rpc"] }
 alloy-rpc-types-eth = { version = "1.7" }
 alloy-genesis = { version = "1.7" }
 alloy-network = { version = "1.7" }

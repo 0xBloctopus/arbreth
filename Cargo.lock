@@ -1055,7 +1055,7 @@ dependencies = [
  "revm",
  "revm-database",
  "revm-primitives",
- "revm-state",
+ "revm-state 10.0.0",
  "thiserror 2.0.18",
  "tracing",
 ]
@@ -1233,7 +1233,7 @@ dependencies = [
  "reth-storage-api",
  "revm",
  "revm-database",
- "revm-state",
+ "revm-state 10.0.0",
  "thiserror 2.0.18",
  "tracing",
 ]
@@ -2954,7 +2954,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7ab67060fc6b8ef687992d439ca0fa36e7ed17e9a0b16b25b601e8757df720de"
 dependencies = [
  "data-encoding",
- "syn 1.0.109",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -3416,7 +3416,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
- "windows-sys 0.52.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -4333,7 +4333,7 @@ dependencies = [
  "libc",
  "percent-encoding",
  "pin-project-lite",
- "socket2 0.5.10",
+ "socket2 0.6.2",
  "tokio",
  "tower-service",
  "tracing",
@@ -5572,7 +5572,7 @@ version = "0.50.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7957b9740744892f114936ab4a57b3f487491bbeafaf8083688b16841a4240e5"
 dependencies = [
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -6478,7 +6478,7 @@ dependencies = [
  "quinn-udp",
  "rustc-hash",
  "rustls",
- "socket2 0.5.10",
+ "socket2 0.6.2",
  "thiserror 2.0.18",
  "tokio",
  "tracing",
@@ -6515,9 +6515,9 @@ dependencies = [
  "cfg_aliases",
  "libc",
  "once_cell",
- "socket2 0.5.10",
+ "socket2 0.6.2",
  "tracing",
- "windows-sys 0.52.0",
+ "windows-sys 0.60.2",
 ]
 
 [[package]]
@@ -6987,7 +6987,7 @@ dependencies = [
  "reth-storage-api",
  "reth-trie",
  "revm-database",
- "revm-state",
+ "revm-state 9.0.0",
  "serde",
  "tokio",
  "tokio-stream",
@@ -7982,7 +7982,7 @@ dependencies = [
  "reth-tracing",
  "reth-trie",
  "revm",
- "revm-bytecode",
+ "revm-bytecode 8.0.0",
  "revm-database",
  "serde",
  "serde_json",
@@ -8575,9 +8575,9 @@ dependencies = [
  "quanta",
  "rayon",
  "reth-codecs",
- "revm-bytecode",
+ "revm-bytecode 8.0.0",
  "revm-primitives",
- "revm-state",
+ "revm-state 9.0.0",
  "secp256k1 0.30.0",
  "serde",
  "serde_with",
@@ -9168,7 +9168,7 @@ dependencies = [
  "reth-prune-types",
  "reth-static-file-types",
  "revm-database-interface",
- "revm-state",
+ "revm-state 9.0.0",
  "thiserror 2.0.18",
 ]
 
@@ -9408,7 +9408,7 @@ version = "34.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2aabdebaa535b3575231a88d72b642897ae8106cf6b0d12eafc6bfdf50abfc7"
 dependencies = [
- "revm-bytecode",
+ "revm-bytecode 8.0.0",
  "revm-context",
  "revm-context-interface",
  "revm-database",
@@ -9418,7 +9418,7 @@ dependencies = [
  "revm-interpreter",
  "revm-precompile",
  "revm-primitives",
- "revm-state",
+ "revm-state 9.0.0",
 ]
 
 [[package]]
@@ -9426,6 +9426,18 @@ name = "revm-bytecode"
 version = "8.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "74d1e5c1eaa44d39d537f668bc5c3409dc01e5c8be954da6c83370bbdf006457"
+dependencies = [
+ "bitvec",
+ "phf",
+ "revm-primitives",
+ "serde",
+]
+
+[[package]]
+name = "revm-bytecode"
+version = "9.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e86e468df3cf5cf59fa7ef71a3e9ccabb76bb336401ea2c0674f563104cf3c5e"
 dependencies = [
  "bitvec",
  "phf",
@@ -9442,11 +9454,11 @@ dependencies = [
  "bitvec",
  "cfg-if",
  "derive-where",
- "revm-bytecode",
+ "revm-bytecode 8.0.0",
  "revm-context-interface",
  "revm-database-interface",
  "revm-primitives",
- "revm-state",
+ "revm-state 9.0.0",
  "serde",
 ]
 
@@ -9462,7 +9474,7 @@ dependencies = [
  "either",
  "revm-database-interface",
  "revm-primitives",
- "revm-state",
+ "revm-state 9.0.0",
  "serde",
 ]
 
@@ -9473,10 +9485,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "529528d0b05fe646be86223032c3e77aa8b05caa2a35447d538c55965956a511"
 dependencies = [
  "alloy-eips",
- "revm-bytecode",
+ "revm-bytecode 8.0.0",
  "revm-database-interface",
  "revm-primitives",
- "revm-state",
+ "revm-state 9.0.0",
  "serde",
 ]
 
@@ -9489,7 +9501,7 @@ dependencies = [
  "auto_impl",
  "either",
  "revm-primitives",
- "revm-state",
+ "revm-state 9.0.0",
  "serde",
  "thiserror 2.0.18",
 ]
@@ -9502,14 +9514,14 @@ checksum = "0cd0e43e815a85eded249df886c4badec869195e70cdd808a13cfca2794622d2"
 dependencies = [
  "auto_impl",
  "derive-where",
- "revm-bytecode",
+ "revm-bytecode 8.0.0",
  "revm-context",
  "revm-context-interface",
  "revm-database-interface",
  "revm-interpreter",
  "revm-precompile",
  "revm-primitives",
- "revm-state",
+ "revm-state 9.0.0",
  "serde",
 ]
 
@@ -9526,7 +9538,7 @@ dependencies = [
  "revm-handler",
  "revm-interpreter",
  "revm-primitives",
- "revm-state",
+ "revm-state 9.0.0",
  "serde",
  "serde_json",
 ]
@@ -9557,10 +9569,10 @@ version = "32.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "11406408597bc249392d39295831c4b641b3a6f5c471a7c41104a7a1e3564c07"
 dependencies = [
- "revm-bytecode",
+ "revm-bytecode 8.0.0",
  "revm-context-interface",
  "revm-primitives",
- "revm-state",
+ "revm-state 9.0.0",
  "serde",
 ]
 
@@ -9608,7 +9620,20 @@ checksum = "311720d4f0f239b041375e7ddafdbd20032a33b7bae718562ea188e188ed9fd3"
 dependencies = [
  "alloy-eip7928",
  "bitflags 2.11.0",
- "revm-bytecode",
+ "revm-bytecode 8.0.0",
+ "revm-primitives",
+ "serde",
+]
+
+[[package]]
+name = "revm-state"
+version = "10.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d29404707763da607e5d6e4771cb203998c28159279c2f64cc32de08d2814651"
+dependencies = [
+ "alloy-eip7928",
+ "bitflags 2.11.0",
+ "revm-bytecode 9.0.0",
  "revm-primitives",
  "serde",
 ]
@@ -9847,7 +9872,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys",
- "windows-sys 0.52.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -10661,7 +10686,7 @@ dependencies = [
  "getrandom 0.4.1",
  "once_cell",
  "rustix",
- "windows-sys 0.52.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -11924,7 +11949,7 @@ version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
 dependencies = [
- "windows-sys 0.48.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]

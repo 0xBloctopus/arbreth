@@ -103,7 +103,7 @@ alloy-trie = { version = "0.9" }
 alloy-hardforks = { version = "0.4" }
 
 # Revm
-revm = { version = "34.0", features = [
+revm = { version = "36.0", features = [
     "optional_balance_check",
     "optional_eip3541",
     "optional_eip3607",
